@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class GameEngine {
     private TimeTraveller player;
-    private Scanner scanner = new Scanner(system.in);
+    private Scanner scanner = new Scanner(System.in);
 
-    public GameEngine(string playerName) {
+    public GameEngine(String playerName) {
         this.player = new TimeTraveller(playerName);
     }
 
@@ -27,7 +27,7 @@ public class GameEngine {
                 break;
             }
 
-            Timeperiod period = switch (choice) {
+            TimePeriod period = switch (choice) {
                 case 1 -> new MedievalEra();
                 case 2  -> new CyberpunkFuture();
                 case 3 -> new DinosaurAge();
