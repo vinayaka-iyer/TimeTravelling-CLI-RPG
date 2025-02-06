@@ -11,13 +11,13 @@ public class TimeTraveller {
         this.health = 100;
     }
 
-    public void travelTo(TimePeriod Period) {
+    public void travelTo(TimePeriod period) {
         System.out.println("\n✨ You have traveled to " + period.getName());
         period.encounterEvent();
     }
 
     public void takeDamage(int damage) {
-        health -= damange;
+        health -= damage;
         if (health <=0) {
             System.out.println("💀 Oh no! You've died in a time paradox!");
             System.exit(0);
