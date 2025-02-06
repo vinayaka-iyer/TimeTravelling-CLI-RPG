@@ -1,5 +1,7 @@
 package timeperiods;
 
+import game.TimeTraveller;
+
 public abstract class TimePeriod {
     private String name;
 
@@ -11,5 +13,6 @@ public abstract class TimePeriod {
         return name;
     }
 
-    public abstract void encounterEvent();
+    public abstract void encounterEvent(TimeTraveller player); // Accept player object to modify stats
 }
+

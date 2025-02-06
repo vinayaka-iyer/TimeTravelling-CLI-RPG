@@ -39,6 +39,7 @@ public class GameEngine {
 
             if (period != null) {
                 player.travelTo(period);
+                System.out.println("❤\uFE0F Current Health: " + player.getHealth());
             }
         }
     }

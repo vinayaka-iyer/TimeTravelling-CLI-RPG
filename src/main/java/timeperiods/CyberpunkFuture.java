@@ -1,25 +1,29 @@
 package timeperiods;
+
+import game.TimeTraveller;
 import java.util.Scanner;
 
 public class CyberpunkFuture extends TimePeriod {
+
     public CyberpunkFuture() {
-        super("Cyberpunk Future (2100 AD)");
+        super("Cyberpunk Future 🌆");
     }
 
     @Override
-    public void encounterEvent() {
-        System.out.println("🌆 The neon lights of the future blind you. A hacker offers you a job.");
-        System.out.println("Do you accept (1) or refuse (2)?");
-
+    public void encounterEvent(TimeTraveller player) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("🌆 The neon lights of the future blind you. A hacker offers you a job. Do you accept (1) or refuse (2)?");
         int choice = scanner.nextInt();
+
         if (choice == 1) {
-            System.out.println("💻 You accept the hacker's job offer!");
+            System.out.println("💻 You chose to accept the hacker's job.");
+            player.gainCoins(100); // Gain coins for accepting the job
+            player.heal(10); // Healing boost
         } else if (choice == 2) {
-            System.out.println("🚫 You refuse the hacker's job offer.");
+            System.out.println("🚫 You refuse the hacker's job.");
+            player.loseCoins(20); // Lose coins for declining the offer
         } else {
-            System.out.println("❌ Invalid choice. Try again.");
-            encounterEvent();  // Recursively ask for input until valid
+            System.out.println("Invalid choice! Try again.");
         }
     }
 }
