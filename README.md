@@ -11,6 +11,9 @@ Time Travel Adventure is an interactive Java-based role-playing game (RPG) that 
 - Health and coins attributes for the player that affect gameplay.
 - Ability to heal, gain coins, and take damage.
 
+## Gameplay Screenshot
+![time-travel-adventure-screenshot.png](assets/time-travel-adventure-screenshot.png)
+
 ## OOP Concepts Demonstrated
 
 ### 1. **Inheritance**
